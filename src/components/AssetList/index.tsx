@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { View } from 'react-native';
-import { ScrollView } from 'react-native-gesture-handler';
+import { ScrollView } from 'react-native';
 import { AssetCard } from '../AssetCard';
 
 import { styles } from './styles';

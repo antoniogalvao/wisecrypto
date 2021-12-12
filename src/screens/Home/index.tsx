@@ -5,6 +5,7 @@ import { FontAwesome5 } from '@expo/vector-icons';
 
 import { AssetList } from '../../components/AssetList';
 import { styles } from './styles';
+import { CurrencyList } from '../../components/CurrencyList';
 
 export function Home() {
   return (
@@ -50,16 +51,12 @@ export function Home() {
         <AssetList />
       </View>
 
-      <View>
-        <View style={styles.watchlistContainer}>
-          <View style={styles.watchlistHeader}>
-            <Text style={styles.title}>Watchlist</Text>
-            <View style={styles.watchlistContent} />
-          </View>
+      <View style={styles.watchlistContainer}>
+        <View style={styles.watchlistHeader}>
+          <Text style={styles.title}>Watchlist</Text>
         </View>
-
-        <View></View>
       </View>
+      <CurrencyList />
     </View>
   );
 }

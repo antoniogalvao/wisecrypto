@@ -41,7 +41,6 @@ export const styles = StyleSheet.create({
     fontFamily: theme.fonts.text400,
   },
   increaseBox: {
-    backgroundColor: theme.colors.success,
     borderRadius: 8,
     width: 55,
     height: 22,
@@ -49,9 +48,6 @@ export const styles = StyleSheet.create({
     paddingVertical: 4,
     flexDirection: 'row',
     alignItems: 'center',
-  },
-  arrowIcon: {
-    color: theme.colors.white,
   },
   rateIncreaseText: {
     color: theme.colors.white,

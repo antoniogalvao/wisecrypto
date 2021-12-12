@@ -6,7 +6,7 @@ export const assets = [
     icon: 'bitcoin.png',
     amount: '0.00012',
     value: '26.46',
-    increase: '15.3',
+    increase: 15.3,
   },
   {
     id: '2',
@@ -15,7 +15,7 @@ export const assets = [
     icon: 'bitcoin.png',
     amount: '0.00012',
     value: '37.30',
-    increase: '-15.3',
+    increase: -15.3,
   },
   {
     id: '3',
@@ -24,7 +24,7 @@ export const assets = [
     icon: 'bitcoin.png',
     amount: '0.00012',
     value: '89.40',
-    increase: '-1.1',
+    increase: -1.1,
   },
   {
     id: '4',
@@ -33,7 +33,7 @@ export const assets = [
     icon: 'bitcoin.png',
     amount: '0.00012',
     value: '142.50',
-    increase: '15.3',
+    increase: 15.3,
   },
   {
     id: '5',
@@ -42,6 +42,6 @@ export const assets = [
     icon: 'bitcoin.png',
     amount: '0.00012',
     value: '895.40',
-    increase: '15.3',
+    increase: 15.3,
   },
 ];

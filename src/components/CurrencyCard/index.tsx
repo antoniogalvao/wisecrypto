@@ -5,12 +5,13 @@ import { Feather } from '@expo/vector-icons';
 import BitcoinImg from '../../assets/bitcoin.png';
 
 import { styles } from './styles';
+import { theme } from '../../global/styles/theme';
 
 type Props = {
   code: string;
   name: string;
   unitValue: string;
-  increase: string;
+  increase: number;
 };
 
 export function CurrencyCard({ code, name, unitValue, increase }: Props) {
@@ -20,7 +21,7 @@ export function CurrencyCard({ code, name, unitValue, increase }: Props) {
         <View style={styles.imageBox}>
           <Image style={styles.image} source={BitcoinImg} />
         </View>
-        <View style={styles.label}>
+        <View>
           <Text style={styles.code}>{code}</Text>
           <Text style={styles.name}>{name}</Text>
         </View>
@@ -28,12 +29,19 @@ export function CurrencyCard({ code, name, unitValue, increase }: Props) {
 
       <View>
         <Text style={styles.unitValue}>{unitValue}</Text>
-        <View style={styles.increaseBox}>
+        <View
+          style={[
+            styles.increaseBox,
+            {
+              backgroundColor:
+                increase < 0 ? theme.colors.danger : theme.colors.success,
+            },
+          ]}
+        >
           <Feather
-            style={styles.arrowIcon}
-            name='arrow-up-right'
+            name={increase < 0 ? 'arrow-down-left' : 'arrow-up-right'}
             size={14}
-            color='black'
+            color={theme.colors.white}
           />
           <Text style={styles.rateIncreaseText}>{increase}%</Text>
         </View>

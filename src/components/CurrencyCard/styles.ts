@@ -33,7 +33,6 @@ export const styles = StyleSheet.create({
     width: 40,
     height: 40,
   },
-  label: {},
   code: {
     color: theme.colors.black,
     fontSize: 20,
@@ -50,7 +49,6 @@ export const styles = StyleSheet.create({
     fontFamily: theme.fonts.title700,
   },
   increaseBox: {
-    backgroundColor: theme.colors.success,
     borderRadius: 8,
     width: 55,
     height: 22,
@@ -59,9 +57,6 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-between',
     paddingHorizontal: 4,
     alignSelf: 'flex-end',
-  },
-  arrowIcon: {
-    color: theme.colors.white,
   },
   rateIncreaseText: {
     color: theme.colors.white,

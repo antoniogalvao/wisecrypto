@@ -6,6 +6,7 @@ import { FontAwesome5 } from '@expo/vector-icons';
 import { AssetList } from '../../components/AssetList';
 import { styles } from './styles';
 import { CurrencyList } from '../../components/CurrencyList';
+import { LinearGradient } from 'expo-linear-gradient';
 
 export function Home() {
   return (
@@ -26,7 +27,12 @@ export function Home() {
         </View>
       </View>
 
-      <View style={styles.portfolio}>
+      <LinearGradient
+        style={styles.portfolio}
+        colors={['#4DC885', '#00CB6A']}
+        start={{ x: 0.7, y: 0 }}
+        end={{ x: 1, y: 0.5 }}
+      >
         <View>
           <Text style={styles.portfolioTitle}>Total Portfolio</Text>
           <Text style={styles.portfolioValue}>$56.98</Text>
@@ -41,7 +47,7 @@ export function Home() {
           />
           <Text style={styles.portfolioPercentage}>15.93%</Text>
         </View>
-      </View>
+      </LinearGradient>
 
       <View style={styles.assetsContainer}>
         <View style={styles.assetsHeader}>

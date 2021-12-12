@@ -1,8 +1,9 @@
 import React from 'react';
-import { Image, Text, TextInput, View } from 'react-native';
+import { Image, Text, View } from 'react-native';
 
 import LogoImg from '../../assets/logo.png';
 import { Button } from '../../components/Button';
+import { LabeledTextInput } from '../../components/LabeledTextInput';
 
 import { styles } from './styles';
 
@@ -20,11 +21,9 @@ export function SignIn() {
         </View>
 
         <View style={styles.form}>
-          <Text style={styles.label}>Email</Text>
-          <TextInput style={[styles.input, { marginBottom: 16 }]} />
+          <LabeledTextInput title='Email' />
 
-          <Text style={styles.label}>Password</Text>
-          <TextInput style={styles.input} />
+          <LabeledTextInput title='Password' />
 
           <Text style={styles.forgotPassword}>Forgot your password?</Text>
 

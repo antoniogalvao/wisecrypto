@@ -7,6 +7,7 @@ export const theme = {
     danger: '#FE6666',
     dark: '#04150C',
     light: '#F7F7F7',
+    lightGreen: '#E9FCE9',
 
     // TEXT
     black: '#152C07',

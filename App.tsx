@@ -1,21 +1,25 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { useFonts } from 'expo-font';
+import { Montserrat_500Medium } from '@expo-google-fonts/montserrat';
+import {
+  Mulish_400Regular,
+  Mulish_600SemiBold,
+  Mulish_700Bold,
+} from '@expo-google-fonts/mulish';
+import AppLoading from 'expo-app-loading';
+import { SignIn } from './src/screens/SignIn';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+  const [fontsLoaded] = useFonts({
+    Montserrat_500Medium,
+    Mulish_400Regular,
+    Mulish_600SemiBold,
+    Mulish_700Bold,
+  });
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  }
+
+  return <SignIn />;
+}

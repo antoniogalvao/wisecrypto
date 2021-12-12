@@ -9,6 +9,7 @@ import {
 import AppLoading from 'expo-app-loading';
 import { SignIn } from './src/screens/SignIn';
 import { Background } from './src/components/Background';
+import { StatusBar } from 'react-native';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -24,6 +25,11 @@ export default function App() {
 
   return (
     <Background>
+      <StatusBar
+        barStyle='dark-content'
+        backgroundColor='transparent'
+        translucent
+      />
       <SignIn />
     </Background>
   );

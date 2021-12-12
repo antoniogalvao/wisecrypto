@@ -1040,6 +1040,16 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
+"@expo-google-fonts/montserrat@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/montserrat/-/montserrat-0.2.0.tgz#5408c3c287f25bda14a77a8dd98c510e27df773a"
+  integrity sha512-wOdsgn1HCZlyqZ5MpdxGR1NOgJvTcDlOtW760gPKSrRnfB+HAC8YsCaRz+TEtARcjINmt7EjuwVv1T4Hty+jCQ==
+
+"@expo-google-fonts/mulish@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/mulish/-/mulish-0.2.0.tgz#15074476e34a22be94f34f95abba8d0e2e9edf61"
+  integrity sha512-9sg8Xy4h6PFtEl1WIW581DS0dqTgg9CvvoDOQZncYh37UVCO5Y+MbzEWl+li4LiGpKK7xynFxvwmAY32wNPOvA==
+
 "@expo/config-plugins@3.1.0":
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/@expo/config-plugins/-/config-plugins-3.1.0.tgz#0752ff33c5eab21cf42034a44e79df97f0f867f8"

@@ -6,6 +6,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
 
 import { SignIn } from '../screens/SignIn';
+import { Register } from '../screens/Register';
 import { Home } from '../screens/Home';
 import { Market } from '../screens/Market';
 import { Profile } from '../screens/Profile';
@@ -28,6 +29,11 @@ function AuthNavigator() {
       <Stack.Screen
         name='SignIn'
         component={SignIn}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name='Register'
+        component={Register}
         options={{ headerShown: false }}
       />
       <Stack.Screen

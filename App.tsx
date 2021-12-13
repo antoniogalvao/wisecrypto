@@ -5,6 +5,7 @@ import {
   Mulish_400Regular,
   Mulish_600SemiBold,
   Mulish_700Bold,
+  Mulish_800ExtraBold,
 } from '@expo-google-fonts/mulish';
 import { StatusBar } from 'react-native';
 import AppLoading from 'expo-app-loading';
@@ -18,6 +19,7 @@ import { Home } from './src/screens/Home';
 import { Market } from './src/screens/Market';
 import { Background } from './src/components/Background';
 import { theme } from './src/global/styles/theme';
+import { Profile } from './src/screens/Profile';
 
 const Tab = createBottomTabNavigator();
 
@@ -27,6 +29,7 @@ export default function App() {
     Mulish_400Regular,
     Mulish_600SemiBold,
     Mulish_700Bold,
+    Mulish_800ExtraBold,
   });
 
   if (!fontsLoaded) {
@@ -62,7 +65,7 @@ export default function App() {
         >
           <Tab.Screen name='Home' component={Home} />
           <Tab.Screen name='Market' component={Market} />
-          <Tab.Screen name='Profile' component={SignIn} />
+          <Tab.Screen name='Profile' component={Profile} />
         </Tab.Navigator>
       </NavigationContainer>
     </Background>

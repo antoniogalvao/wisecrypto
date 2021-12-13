@@ -1,14 +1,23 @@
 import React from 'react';
 import { Image, ScrollView, Text, View } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import { RectButton } from 'react-native-gesture-handler';
+
 import { Fontisto } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
 
-import { styles } from './styles';
-import { theme } from '../../global/styles/theme';
 import { SettingCard } from '../../components/SettingCard';
 
+import { styles } from './styles';
+import { theme } from '../../global/styles/theme';
+
 export function Profile() {
+  const navigation = useNavigation();
+  function handleLogout() {
+    navigation.navigate('SignIn');
+  }
+
   return (
     <View style={styles.container}>
       <Image
@@ -87,13 +96,15 @@ export function Profile() {
           </SettingCard>
           <View style={{ marginBottom: 16 }} />
 
-          <SettingCard
-            title='Logout'
-            description='Exit the app'
-            iconBackgroundColor={theme.colors.lightDanger}
-          >
-            <Ionicons name='exit' size={20} color={theme.colors.danger} />
-          </SettingCard>
+          <RectButton onPress={handleLogout}>
+            <SettingCard
+              title='Logout'
+              description='Exit the app'
+              iconBackgroundColor={theme.colors.lightDanger}
+            >
+              <Ionicons name='exit' size={20} color={theme.colors.danger} />
+            </SettingCard>
+          </RectButton>
         </View>
       </ScrollView>
     </View>

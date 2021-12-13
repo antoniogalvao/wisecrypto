@@ -1,5 +1,6 @@
 import React from 'react';
 import { Image, Text, View } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 import LogoImg from '../../assets/logo.png';
 import { Button } from '../../components/Button';
@@ -8,6 +9,12 @@ import { LabeledTextInput } from '../../components/LabeledTextInput';
 import { styles } from './styles';
 
 export function SignIn() {
+  const navigation = useNavigation();
+
+  function handleLogin() {
+    navigation.navigate('Root');
+  }
+
   return (
     <View style={styles.container}>
       <Image source={LogoImg} style={styles.image} />
@@ -27,7 +34,7 @@ export function SignIn() {
 
           <Text style={styles.forgotPassword}>Forgot your password?</Text>
 
-          <Button title='Login' />
+          <Button title='Login' onPress={handleLogin} />
           <Text style={styles.register}>
             Don't have an account yet? Register here
           </Text>

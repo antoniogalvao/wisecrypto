@@ -2,18 +2,19 @@ import { StyleSheet } from 'react-native';
 import { theme } from '../../global/styles/theme';
 
 export const styles = StyleSheet.create({
-  setting: {
+  container: {
     width: '100%',
     height: 68,
     borderRadius: 10,
     backgroundColor: theme.colors.white,
     flexDirection: 'row',
     justifyContent: 'space-between',
+    alignItems: 'center',
     paddingVertical: 12,
     paddingHorizontal: 16,
   },
-  settingContent: {
-    justifyContent: 'center',
+  content: {
+    width: '100%',
     flexDirection: 'row',
     alignItems: 'center',
   },
@@ -36,6 +37,7 @@ export const styles = StyleSheet.create({
     fontFamily: theme.fonts.text400,
   },
   chevronContainer: {
-    justifyContent: 'center',
+    alignItems: 'center',
+    marginLeft: -12,
   },
 });

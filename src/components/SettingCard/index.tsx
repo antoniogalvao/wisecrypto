@@ -20,8 +20,8 @@ export function SettingCard({
   children,
 }: Props) {
   return (
-    <View style={styles.setting}>
-      <View style={styles.settingContent}>
+    <View style={styles.container}>
+      <View style={styles.content}>
         <View
           style={[
             styles.iconContainer,
@@ -35,6 +35,7 @@ export function SettingCard({
           <Text style={styles.settingDescription}>{description}</Text>
         </View>
       </View>
+
       <View style={styles.chevronContainer}>
         <FontAwesome5
           name='chevron-right'

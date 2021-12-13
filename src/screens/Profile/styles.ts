@@ -53,13 +53,13 @@ export const styles = StyleSheet.create({
     height: 66,
     paddingHorizontal: 40,
     flexDirection: 'row',
-    justifyContent: 'space-between',
     alignItems: 'center',
     marginTop: -42,
     marginBottom: 24,
   },
   headerOption: {
     alignItems: 'center',
+    flex: 2,
   },
   headerLabel: {
     color: theme.colors.primary20,
@@ -69,6 +69,7 @@ export const styles = StyleSheet.create({
   headerDivider: {
     width: 35,
     borderWidth: 1,
+    flex: 1,
     borderColor: theme.colors.primary,
     transform: [{ rotate: '90deg' }],
   },

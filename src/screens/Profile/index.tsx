@@ -96,15 +96,14 @@ export function Profile() {
           </SettingCard>
           <View style={{ marginBottom: 16 }} />
 
-          <RectButton onPress={handleLogout}>
-            <SettingCard
-              title='Logout'
-              description='Exit the app'
-              iconBackgroundColor={theme.colors.lightDanger}
-            >
-              <Ionicons name='exit' size={20} color={theme.colors.danger} />
-            </SettingCard>
-          </RectButton>
+          <SettingCard
+            onPress={handleLogout}
+            title='Logout'
+            description='Exit the app'
+            iconBackgroundColor={theme.colors.lightDanger}
+          >
+            <Ionicons name='exit' size={20} color={theme.colors.danger} />
+          </SettingCard>
         </View>
       </ScrollView>
     </View>

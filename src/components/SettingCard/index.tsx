@@ -5,8 +5,9 @@ import { FontAwesome5 } from '@expo/vector-icons';
 import { theme } from '../../global/styles/theme';
 
 import { styles } from './styles';
+import { RectButton, RectButtonProps } from 'react-native-gesture-handler';
 
-type Props = {
+type Props = RectButtonProps & {
   title: string;
   description: string;
   iconBackgroundColor: string;
@@ -18,9 +19,10 @@ export function SettingCard({
   description,
   iconBackgroundColor,
   children,
+  ...rest
 }: Props) {
   return (
-    <View style={styles.container}>
+    <RectButton style={styles.container} {...rest}>
       <View style={styles.content}>
         <View
           style={[
@@ -43,6 +45,6 @@ export function SettingCard({
           color={theme.colors.gray2}
         />
       </View>
-    </View>
+    </RectButton>
   );
 }

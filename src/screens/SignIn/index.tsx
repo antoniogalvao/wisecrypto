@@ -17,13 +17,14 @@ export function SignIn() {
   const [password, setPassword] = useState('');
 
   async function handleLogin() {
-    try {
-      await api.post('auth/session', { email, password });
-      navigation.navigate('Root');
-    } catch (error) {
-      console.log(error);
-      Alert.alert('Invalid credentials!');
-    }
+    // try {
+    //   await api.post('auth/session', { email, password });
+    //   navigation.navigate('Root');
+    // } catch (error) {
+    //   console.log(error);
+    //   Alert.alert('Invalid credentials!');
+    // }
+    navigation.navigate('Root');
   }
 
   function handleNavigateToRegisterScreen() {
